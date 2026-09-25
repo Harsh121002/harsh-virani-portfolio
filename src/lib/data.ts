@@ -74,6 +74,7 @@ export const experience = [
 export const projects = [
   {
     title: "Hugei",
+    liveUrl: "https://hugei.codderlab.com/",
     image: "/projects/hugei.png",
     subtitle: "Social & Live Streaming Platform",
     role: "Team Lead",
@@ -88,6 +89,7 @@ export const projects = [
   },
   {
     title: "UpDesk",
+    liveUrl: "https://updesk.codderlab.com/",
     image: "/projects/updesk.png",
     subtitle: "Multi-role Support Desk",
     role: "Frontend Developer",
@@ -102,6 +104,7 @@ export const projects = [
   },
   {
     title: "Mova",
+    liveUrl: "https://movaweb.codderlab.com/",
     image: "/projects/mova.png",
     subtitle: "Video Streaming Platform",
     role: "Frontend Developer",
@@ -116,6 +119,7 @@ export const projects = [
   },
   {
     title: "Listify Web",
+    liveUrl: "https://listifyweb.codderlab.com/",
     image: "/projects/listify.png",
     subtitle: "Legal Document Generator",
     role: "Frontend Developer",

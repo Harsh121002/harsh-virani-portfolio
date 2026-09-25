@@ -52,6 +52,10 @@ export default function Projects() {
               project.accent === "cyan"
                 ? "text-accent-cyan border-accent-cyan/30 bg-accent-cyan/10"
                 : "text-accent-violet border-accent-violet/30 bg-accent-violet/10";
+            const cta =
+              project.accent === "cyan"
+                ? "bg-accent-cyan/15 text-accent-cyan border-accent-cyan/30 hover:bg-accent-cyan/25"
+                : "bg-accent-violet/15 text-accent-violet border-accent-violet/30 hover:bg-accent-violet/25";
 
             return (
               <motion.article
@@ -63,7 +67,13 @@ export default function Projects() {
                 transition={{ duration: 0.45, delay: i * 0.08 }}
                 whileHover={{ y: -4 }}
               >
-                <div className="relative aspect-[16/9] overflow-hidden border-b border-white/5">
+                <a
+                  href={project.liveUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group relative aspect-[16/9] overflow-hidden border-b border-white/5 block"
+                  aria-label={`Open ${project.title} live site`}
+                >
                   <Image
                     src={project.image}
                     alt={`${project.title} — ${project.subtitle}`}
@@ -73,7 +83,10 @@ export default function Projects() {
                     priority={i < 2}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-navy-950/80 via-transparent to-transparent" />
-                </div>
+                  <span className="absolute bottom-3 right-3 rounded-full border border-white/20 bg-navy-950/70 px-3 py-1 text-xs font-medium text-white backdrop-blur-sm opacity-0 transition-opacity group-hover:opacity-100">
+                    View live →
+                  </span>
+                </a>
 
                 <div className="p-6 sm:p-7 flex flex-col flex-1">
                   <div className="flex flex-wrap items-center gap-2 mb-3">
@@ -110,8 +123,7 @@ export default function Projects() {
                     ))}
                   </ul>
 
-                  <div className="mt-6 pt-5 border-t border-white/5">
-                    <p className="sr-only">Tech stack</p>
+                  <div className="mt-6 pt-5 border-t border-white/5 flex flex-col gap-4">
                     <ul className="flex flex-wrap gap-2">
                       {project.stack.map((tech) => {
                         const slug = stackToIconSlug(tech);
@@ -128,6 +140,16 @@ export default function Projects() {
                         );
                       })}
                     </ul>
+
+                    <a
+                      href={project.liveUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={`inline-flex w-fit items-center gap-2 rounded-lg border px-3.5 py-2 text-sm font-medium transition-colors ${cta}`}
+                    >
+                      Live demo
+                      <span aria-hidden="true">↗</span>
+                    </a>
                   </div>
                 </div>
               </motion.article>
