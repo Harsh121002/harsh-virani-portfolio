@@ -33,13 +33,17 @@ function useCanTilt() {
 
   useEffect(() => {
     const fine = window.matchMedia("(pointer: fine)");
+    const wide = window.matchMedia("(min-width: 768px)");
     const motionOk = window.matchMedia("(prefers-reduced-motion: no-preference)");
-    const update = () => setEnabled(fine.matches && motionOk.matches);
+    const update = () =>
+      setEnabled(fine.matches && wide.matches && motionOk.matches);
     update();
     fine.addEventListener("change", update);
+    wide.addEventListener("change", update);
     motionOk.addEventListener("change", update);
     return () => {
       fine.removeEventListener("change", update);
+      wide.removeEventListener("change", update);
       motionOk.removeEventListener("change", update);
     };
   }, []);

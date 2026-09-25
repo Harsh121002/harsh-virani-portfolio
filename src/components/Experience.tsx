@@ -14,11 +14,11 @@ export default function Experience() {
           description="Shipping accessible interfaces and owning UI delivery in a product team."
         />
 
-        <ol className="relative border-l border-white/10 ml-3 sm:ml-4 space-y-10">
+        <ol className="relative border-l border-white/10 ml-2 sm:ml-4 space-y-8 sm:space-y-10">
           {experience.map((job, i) => (
             <motion.li
               key={`${job.company}-${job.period}`}
-              className="relative pl-8 sm:pl-10"
+              className="relative pl-6 sm:pl-10"
               initial={{ opacity: 0, x: -16 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true, margin: "-60px" }}
@@ -28,9 +28,9 @@ export default function Experience() {
                 className="absolute -left-[9px] top-1.5 h-4 w-4 rounded-full border-2 border-accent-cyan bg-navy-950 glow-cyan"
                 aria-hidden="true"
               />
-              <article className="glass rounded-2xl p-5 sm:p-7">
+              <article className="glass rounded-2xl p-4 sm:p-7 min-w-0">
                 <div className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1 sm:gap-4">
-                  <h3 className="text-xl font-semibold text-white">
+                  <h3 className="text-lg sm:text-xl font-semibold text-white">
                     {job.role}
                   </h3>
                   <time className="font-mono text-xs sm:text-sm text-accent-violet shrink-0">

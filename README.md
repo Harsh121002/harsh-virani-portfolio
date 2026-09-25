@@ -87,7 +87,7 @@ src/
 
 ## TODOs before going live
 
-- [ ] Replace `#linkedin` in `src/lib/data.ts` with the real LinkedIn URL
+- [x] LinkedIn URL set in `src/lib/data.ts`
 - [ ] Replace `#github` in `src/lib/data.ts` with the real GitHub profile URL
 - [ ] (Optional) Add project live/demo links and screenshots
 

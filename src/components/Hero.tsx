@@ -49,7 +49,7 @@ export default function Hero() {
           </motion.p>
 
           <motion.h1
-            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-white pointer-events-auto"
+            className="text-[2.15rem] leading-[1.1] sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-white pointer-events-auto"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.55, delay: 0.2 }}
@@ -84,13 +84,13 @@ export default function Hero() {
           >
             <a
               href="#projects"
-              className="inline-flex items-center justify-center rounded-full bg-accent-cyan px-6 py-3 text-sm font-semibold text-navy-950 hover:bg-cyan-300 transition-colors shadow-lg shadow-cyan-500/20"
+              className="inline-flex min-h-[44px] items-center justify-center rounded-full bg-accent-cyan px-6 py-3 text-sm font-semibold text-navy-950 hover:bg-cyan-300 transition-colors shadow-lg shadow-cyan-500/20"
             >
               View projects
             </a>
             <a
               href="#contact"
-              className="inline-flex items-center justify-center rounded-full border border-white/15 bg-white/5 px-6 py-3 text-sm font-semibold text-white hover:bg-white/10 transition-colors"
+              className="inline-flex min-h-[44px] items-center justify-center rounded-full border border-white/15 bg-white/5 px-6 py-3 text-sm font-semibold text-white hover:bg-white/10 transition-colors"
             >
               Get in touch
             </a>
@@ -109,7 +109,7 @@ export default function Hero() {
 
       <motion.a
         href="#about"
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-2 text-slate-500 hover:text-accent-cyan transition-colors"
+        className="absolute bottom-6 sm:bottom-8 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-2 min-h-[44px] justify-center text-slate-500 hover:text-accent-cyan transition-colors"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1.2 }}

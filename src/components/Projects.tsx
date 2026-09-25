@@ -64,7 +64,7 @@ export default function Projects() {
           description="Production apps spanning live streaming, support desks, video platforms, and guided UX flows."
         />
 
-        <div className="flex flex-col gap-20 md:gap-28 lg:gap-32">
+        <div className="flex flex-col gap-14 sm:gap-20 md:gap-28 lg:gap-32">
           {projects.map((project, i) => (
             <ProjectCard
               key={project.title}

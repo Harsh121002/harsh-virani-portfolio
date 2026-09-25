@@ -86,13 +86,11 @@ const contacts: ContactCard[] = [
   {
     id: "linkedin",
     label: "LinkedIn",
-    value: "Connect with me",
+    value: "harsh-virani-hh121002",
     href: siteConfig.linkedin,
     accent: "violet",
-    external: siteConfig.linkedin.startsWith("http"),
-    ariaLabel: siteConfig.linkedin === "#linkedin"
-      ? "LinkedIn profile (URL pending)"
-      : "LinkedIn profile",
+    external: true,
+    ariaLabel: "LinkedIn profile",
     icon: <LinkedInIcon />,
   },
 ];
@@ -116,7 +114,7 @@ export default function Contact() {
 
       {/* Ghost decorative number */}
       <span
-        className="pointer-events-none absolute -top-4 right-4 sm:right-10 select-none font-mono text-[7rem] sm:text-[9rem] md:text-[11rem] font-bold leading-none tracking-tighter text-white/[0.03]"
+        className="pointer-events-none absolute -top-2 right-2 sm:right-10 select-none font-mono text-[5rem] sm:text-[9rem] md:text-[11rem] font-bold leading-none tracking-tighter text-white/[0.03]"
         aria-hidden="true"
       >
         05
@@ -163,7 +161,7 @@ export default function Contact() {
                   ? { target: "_blank", rel: "noopener noreferrer" }
                   : {})}
                 aria-label={item.ariaLabel}
-                className={`group relative flex items-start gap-4 overflow-hidden rounded-2xl border border-white/10 bg-white/[0.03] p-5 sm:p-6 backdrop-blur-md transition-all duration-300 ${hoverBorder} hover:bg-white/[0.055] hover:-translate-y-0.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent-cyan`}
+                className={`group relative flex items-start gap-3 sm:gap-4 overflow-hidden rounded-2xl border border-white/10 bg-white/[0.03] p-4 sm:p-6 backdrop-blur-md transition-all duration-300 ${hoverBorder} hover:bg-white/[0.055] sm:hover:-translate-y-0.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent-cyan`}
                 initial={{ opacity: 0, y: 28 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-40px" }}
@@ -211,14 +209,14 @@ export default function Contact() {
         >
           <a
             href={`mailto:${siteConfig.email}?subject=Hello%20Harsh`}
-            className="inline-flex items-center justify-center gap-2 rounded-xl bg-accent-cyan px-6 py-3.5 text-sm font-semibold text-navy-950 transition-all duration-300 hover:bg-cyan-300 hover:-translate-y-0.5 shadow-[0_0_28px_rgba(34,211,238,0.3)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent-cyan"
+            className="inline-flex w-full sm:w-auto min-h-[44px] items-center justify-center gap-2 rounded-xl bg-accent-cyan px-6 py-3.5 text-sm font-semibold text-navy-950 transition-all duration-300 hover:bg-cyan-300 hover:-translate-y-0.5 shadow-[0_0_28px_rgba(34,211,238,0.3)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent-cyan"
           >
             <MailIcon />
             Send an email
           </a>
           <a
             href={`tel:${siteConfig.phone.replace(/\s/g, "")}`}
-            className="inline-flex items-center justify-center gap-2 rounded-xl border border-white/15 bg-white/5 px-6 py-3.5 text-sm font-semibold text-white transition-all duration-300 hover:border-accent-violet/40 hover:bg-white/10 hover:-translate-y-0.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent-violet"
+            className="inline-flex w-full sm:w-auto min-h-[44px] items-center justify-center gap-2 rounded-xl border border-white/15 bg-white/5 px-6 py-3.5 text-sm font-semibold text-white transition-all duration-300 hover:border-accent-violet/40 hover:bg-white/10 hover:-translate-y-0.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent-violet"
           >
             <PhoneIcon />
             Call now

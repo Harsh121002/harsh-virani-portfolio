@@ -76,20 +76,20 @@ export default function ProjectCard({
     >
       {/* Ghost case-study number */}
       <span
-        className="pointer-events-none absolute -top-8 left-0 z-0 select-none font-mono text-[6.5rem] sm:text-[8rem] md:text-[9.5rem] font-bold leading-none tracking-tighter text-white/[0.035] md:text-white/[0.045]"
+        className="pointer-events-none absolute -top-6 sm:-top-8 left-0 z-0 select-none font-mono text-[4.5rem] sm:text-[7rem] md:text-[9.5rem] font-bold leading-none tracking-tighter text-white/[0.035] md:text-white/[0.045]"
         aria-hidden="true"
       >
         {number}
       </span>
 
       <div
-        className={`relative z-10 grid items-center gap-8 lg:gap-12 ${
+        className={`relative z-10 grid items-center gap-6 sm:gap-8 lg:gap-12 ${
           featured ? "lg:gap-14" : ""
         } lg:grid-cols-12`}
       >
         {/* Media column */}
         <div
-          className={`lg:col-span-7 ${
+          className={`min-w-0 lg:col-span-7 ${
             imageLeft ? "lg:order-1" : "lg:order-2"
           } order-1`}
         >
@@ -143,7 +143,7 @@ export default function ProjectCard({
                   src={project.image}
                   alt={`${project.title} — ${project.subtitle}`}
                   fill
-                  className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.06]"
+                  className="object-cover transition-transform duration-700 ease-out md:group-hover:scale-[1.06]"
                   sizes={
                     featured
                       ? "(max-width: 1024px) 100vw, 58vw"
@@ -179,7 +179,7 @@ export default function ProjectCard({
 
         {/* Content column */}
         <div
-          className={`lg:col-span-5 ${
+          className={`min-w-0 lg:col-span-5 ${
             imageLeft ? "lg:order-2" : "lg:order-1"
           } order-2 flex flex-col`}
           style={{ transformStyle: "preserve-3d" }}
@@ -196,8 +196,8 @@ export default function ProjectCard({
           <h3
             className={`font-bold tracking-tight text-white ${
               featured
-                ? "text-3xl sm:text-4xl md:text-[2.75rem] leading-[1.1]"
-                : "text-2xl sm:text-3xl md:text-[2.15rem] leading-tight"
+                ? "text-[1.65rem] sm:text-4xl md:text-[2.75rem] leading-[1.15]"
+                : "text-[1.45rem] sm:text-3xl md:text-[2.15rem] leading-tight"
             }`}
           >
             {project.title}
@@ -245,7 +245,7 @@ export default function ProjectCard({
             href={project.liveUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className={`mt-8 inline-flex w-fit items-center gap-2.5 rounded-xl px-5 py-2.5 text-sm font-semibold transition-all duration-300 hover:-translate-y-0.5 active:translate-y-0 ${cta}`}
+            className={`mt-8 inline-flex min-h-[44px] w-full sm:w-fit items-center justify-center gap-2.5 rounded-xl px-5 py-2.5 text-sm font-semibold transition-all duration-300 hover:-translate-y-0.5 active:translate-y-0 ${cta}`}
           >
             Live demo
             <span aria-hidden="true" className="text-base leading-none">

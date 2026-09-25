@@ -30,12 +30,13 @@ export default function Navbar() {
       }`}
     >
       <nav
-        className="mx-auto flex max-w-6xl items-center justify-between px-4 sm:px-6 lg:px-8 h-16 md:h-18"
+        className="mx-auto flex max-w-6xl items-center justify-between px-4 sm:px-6 lg:px-8 h-16 md:h-[4.5rem]"
         aria-label="Primary"
       >
         <a
           href="#hero"
           className="font-mono text-sm sm:text-base font-semibold tracking-tight text-white hover:text-accent-cyan transition-colors"
+          onClick={() => setOpen(false)}
         >
           <span className="text-accent-cyan">&lt;</span>
           {siteConfig.name.split(" ")[0]}
@@ -47,7 +48,7 @@ export default function Navbar() {
             <li key={link.href}>
               <a
                 href={link.href}
-                className="px-3 py-2 text-sm text-slate-300 hover:text-white transition-colors rounded-md"
+                className="inline-flex min-h-[44px] items-center px-3 py-2 text-sm text-slate-300 hover:text-white transition-colors rounded-md"
               >
                 {link.label}
               </a>
@@ -56,7 +57,7 @@ export default function Navbar() {
           <li>
             <a
               href="#contact"
-              className="ml-2 inline-flex items-center rounded-full bg-accent-cyan/10 border border-accent-cyan/30 px-4 py-1.5 text-sm font-medium text-accent-cyan hover:bg-accent-cyan/20 transition-colors"
+              className="ml-2 inline-flex min-h-[40px] items-center rounded-full bg-accent-cyan/10 border border-accent-cyan/30 px-4 py-1.5 text-sm font-medium text-accent-cyan hover:bg-accent-cyan/20 transition-colors"
             >
               Hire me
             </a>
@@ -65,7 +66,7 @@ export default function Navbar() {
 
         <button
           type="button"
-          className="md:hidden inline-flex items-center justify-center rounded-md p-2 text-slate-300 hover:text-white hover:bg-white/5"
+          className="md:hidden inline-flex h-11 w-11 items-center justify-center rounded-md text-slate-300 hover:text-white hover:bg-white/5"
           aria-expanded={open}
           aria-controls="mobile-menu"
           aria-label={open ? "Close menu" : "Open menu"}
@@ -106,18 +107,27 @@ export default function Navbar() {
             exit={{ opacity: 0, height: 0 }}
             className="md:hidden border-t border-white/5 bg-navy-950/95 backdrop-blur-xl overflow-hidden"
           >
-            <ul className="flex flex-col px-4 py-4 gap-1">
+            <ul className="flex flex-col px-4 py-4 gap-1 max-h-[calc(100dvh-4rem)] overflow-y-auto">
               {navLinks.map((link) => (
                 <li key={link.href}>
                   <a
                     href={link.href}
-                    className="block rounded-lg px-3 py-3 text-base text-slate-200 hover:bg-white/5 hover:text-accent-cyan"
+                    className="block rounded-lg px-3 py-3.5 text-base text-slate-200 hover:bg-white/5 hover:text-accent-cyan"
                     onClick={() => setOpen(false)}
                   >
                     {link.label}
                   </a>
                 </li>
               ))}
+              <li className="pt-2">
+                <a
+                  href="#contact"
+                  className="block rounded-xl border border-accent-cyan/30 bg-accent-cyan/10 px-3 py-3.5 text-center text-base font-medium text-accent-cyan hover:bg-accent-cyan/20"
+                  onClick={() => setOpen(false)}
+                >
+                  Hire me
+                </a>
+              </li>
             </ul>
           </motion.div>
         )}

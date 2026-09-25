@@ -19,7 +19,7 @@ export default function Skills() {
           {skillCategories.map((category, i) => (
             <motion.div
               key={category.title}
-              className="glass rounded-2xl p-5 sm:p-6"
+              className="glass rounded-2xl p-4 sm:p-6 min-w-0"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-40px" }}

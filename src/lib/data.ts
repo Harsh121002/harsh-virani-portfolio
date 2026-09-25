@@ -3,9 +3,7 @@ export const siteConfig = {
   role: "Software Developer",
   email: "harshvirani1212@gmail.com",
   phone: "+91 76220 45658",
-  // TODO: Replace with real LinkedIn profile URL
-  linkedin: "#linkedin",
-  // TODO: Replace with real GitHub profile URL
+  linkedin: "https://www.linkedin.com/in/harsh-virani-hh121002",
   github: "https://github.com/Harsh121002",
   summary:
     "Software Developer with hands-on experience building responsive, production web applications using React, Next.js, and Redux Toolkit. Comfortable owning features end-to-end — from UI architecture and state management to Firebase authentication and REST API integration. Led frontend delivery on a multi-module admin panel as team lead, coordinating with backend teams and mentoring junior developers.",

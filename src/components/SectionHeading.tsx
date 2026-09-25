@@ -16,7 +16,7 @@ export default function SectionHeading({
 }: Props) {
   return (
     <motion.div
-      className="mb-12 md:mb-16 max-w-2xl"
+      className="mb-10 sm:mb-12 md:mb-16 max-w-2xl"
       initial={{ opacity: 0, y: 24 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-80px" }}
@@ -27,7 +27,7 @@ export default function SectionHeading({
           {eyebrow}
         </p>
       )}
-      <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-white">
+      <h2 className="text-[1.75rem] leading-tight sm:text-4xl md:text-5xl font-bold tracking-tight text-white">
         {title}
       </h2>
       {description && (
