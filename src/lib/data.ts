@@ -74,6 +74,7 @@ export const experience = [
 export const projects = [
   {
     title: "Hugei",
+    image: "/projects/hugei.png",
     subtitle: "Social & Live Streaming Platform",
     role: "Team Lead",
     stack: ["React", "Firebase", "Axios", "ApexCharts", "Recharts"],
@@ -87,6 +88,7 @@ export const projects = [
   },
   {
     title: "UpDesk",
+    image: "/projects/updesk.png",
     subtitle: "Multi-role Support Desk",
     role: "Frontend Developer",
     stack: ["Next.js", "MongoDB", "Socket.IO", "Redux", "AI/RAG"],
@@ -100,6 +102,7 @@ export const projects = [
   },
   {
     title: "Mova",
+    image: "/projects/mova.png",
     subtitle: "Video Streaming Platform",
     role: "Frontend Developer",
     stack: ["Next.js", "Redux Toolkit", "Firebase", "Stripe"],
@@ -113,6 +116,7 @@ export const projects = [
   },
   {
     title: "Listify Web",
+    image: "/projects/listify.png",
     subtitle: "Legal Document Generator",
     role: "Frontend Developer",
     stack: ["React", "Responsive UI"],
