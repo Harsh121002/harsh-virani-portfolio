@@ -26,11 +26,28 @@ export const metadata: Metadata = {
     "Portfolio",
   ],
   authors: [{ name: "Harsh Virani" }],
+  metadataBase: new URL("https://harsh-virani-portfolio.vercel.app"),
   openGraph: {
     title: "Harsh Virani — Software Developer",
     description:
       "Software Developer building responsive production apps with React, Next.js, and Redux Toolkit.",
     type: "website",
+    url: "https://harsh-virani-portfolio.vercel.app",
+    images: [
+      {
+        url: "/og-thumbnail.png",
+        width: 1200,
+        height: 630,
+        alt: "Harsh Virani — Software Developer Portfolio",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Harsh Virani — Software Developer",
+    description:
+      "Software Developer building responsive production apps with React, Next.js, and Redux Toolkit.",
+    images: ["/og-thumbnail.png"],
   },
 };
 
