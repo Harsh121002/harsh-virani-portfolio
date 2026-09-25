@@ -1,6 +1,6 @@
 # Harsh Virani — Portfolio
 
-Production-ready personal portfolio for **Harsh Virani**, Frontend Developer.
+Production-ready personal portfolio for **Harsh Virani**, Software Developer.
 
 Built with **Next.js 14 (App Router)**, **TypeScript**, **Tailwind CSS**, **React Three Fiber**, **drei**, **Framer Motion**, and **Simple Icons**.
 

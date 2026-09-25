@@ -1,6 +1,6 @@
 export const siteConfig = {
   name: "Harsh Virani",
-  role: "Frontend Developer",
+  role: "Software Developer",
   email: "harshvirani1212@gmail.com",
   phone: "+91 76220 45658",
   // TODO: Replace with real LinkedIn profile URL
@@ -8,7 +8,7 @@ export const siteConfig = {
   // TODO: Replace with real GitHub profile URL
   github: "https://github.com/Harsh121002",
   summary:
-    "Frontend Developer with hands-on experience building responsive, production web applications using React, Next.js, and Redux Toolkit. Comfortable owning features end-to-end — from UI architecture and state management to Firebase authentication and REST API integration. Led frontend delivery on a multi-module admin panel as team lead, coordinating with backend teams and mentoring junior developers.",
+    "Software Developer with hands-on experience building responsive, production web applications using React, Next.js, and Redux Toolkit. Comfortable owning features end-to-end — from UI architecture and state management to Firebase authentication and REST API integration. Led frontend delivery on a multi-module admin panel as team lead, coordinating with backend teams and mentoring junior developers.",
   languages: ["English", "Hindi", "Gujarati"],
 };
 
@@ -59,7 +59,7 @@ export const skillCategories = [
 
 export const experience = [
   {
-    role: "Frontend Developer",
+    role: "Software Developer",
     company: "Xitij Infotech Pvt. Ltd.",
     period: "Feb 2025 – Present",
     bullets: [
@@ -92,7 +92,7 @@ export const projects = [
     liveUrl: "https://updesk.codderlab.com/",
     image: "/projects/updesk.png",
     subtitle: "Multi-role Support Desk",
-    role: "Frontend Developer",
+    role: "Software Developer",
     stack: ["Next.js", "MongoDB", "Socket.IO", "Redux", "AI/RAG"],
     highlights: [
       "Role-based portals: Admin, Manager, Developer, Client",
@@ -107,7 +107,7 @@ export const projects = [
     liveUrl: "https://movaweb.codderlab.com/",
     image: "/projects/mova.png",
     subtitle: "Video Streaming Platform",
-    role: "Frontend Developer",
+    role: "Software Developer",
     stack: ["Next.js", "Redux Toolkit", "Firebase", "Stripe"],
     highlights: [
       "Video.js HLS and YouTube playback",
@@ -122,7 +122,7 @@ export const projects = [
     liveUrl: "https://listifyweb.codderlab.com/",
     image: "/projects/listify.png",
     subtitle: "Legal Document Generator",
-    role: "Frontend Developer",
+    role: "Software Developer",
     stack: ["React", "Responsive UI"],
     highlights: [
       "Privacy Policy and Terms generator",

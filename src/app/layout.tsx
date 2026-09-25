@@ -14,12 +14,12 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Harsh Virani — Frontend Developer",
+  title: "Harsh Virani — Software Developer",
   description:
-    "Frontend Developer specializing in React, Next.js, and Redux Toolkit. Building responsive, production web applications with Firebase, REST APIs, and modern UI.",
+    "Software Developer specializing in React, Next.js, and Redux Toolkit. Building responsive, production web applications with Firebase, REST APIs, and modern UI.",
   keywords: [
     "Harsh Virani",
-    "Frontend Developer",
+    "Software Developer",
     "React",
     "Next.js",
     "Redux Toolkit",
@@ -27,9 +27,9 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "Harsh Virani" }],
   openGraph: {
-    title: "Harsh Virani — Frontend Developer",
+    title: "Harsh Virani — Software Developer",
     description:
-      "Frontend Developer building responsive production apps with React, Next.js, and Redux Toolkit.",
+      "Software Developer building responsive production apps with React, Next.js, and Redux Toolkit.",
     type: "website",
   },
 };
