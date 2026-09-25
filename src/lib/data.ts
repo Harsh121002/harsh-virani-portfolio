@@ -125,24 +125,10 @@ export const projects = [
   },
 ];
 
-export const education = [
-  {
-    degree: "Higher Diploma in Computer Science",
-    school: "LSBF Singapore",
-    period: "2022–2023",
-  },
-  {
-    degree: "Diploma in Infocomm Technology",
-    school: "PSB Academy Singapore",
-    period: "2019–2021",
-  },
-];
-
 export const navLinks = [
   { href: "#about", label: "About" },
   { href: "#skills", label: "Skills" },
   { href: "#experience", label: "Experience" },
   { href: "#projects", label: "Projects" },
-  { href: "#education", label: "Education" },
   { href: "#contact", label: "Contact" },
 ];

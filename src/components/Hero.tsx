@@ -1,7 +1,8 @@
 "use client";
 
+import { useRef } from "react";
 import dynamic from "next/dynamic";
-import { motion } from "framer-motion";
+import { motion, useScroll, useMotionValueEvent } from "framer-motion";
 import { siteConfig } from "@/lib/data";
 
 const HeroScene = dynamic(() => import("./HeroScene"), {
@@ -14,14 +15,27 @@ const HeroScene = dynamic(() => import("./HeroScene"), {
 });
 
 export default function Hero() {
+  const sectionRef = useRef<HTMLElement>(null);
+  const scrollProgress = useRef(0);
+
+  const { scrollYProgress } = useScroll({
+    target: sectionRef,
+    offset: ["start start", "end start"],
+  });
+
+  useMotionValueEvent(scrollYProgress, "change", (latest) => {
+    scrollProgress.current = latest;
+  });
+
   return (
     <section
+      ref={sectionRef}
       id="hero"
       className="relative min-h-screen flex items-center overflow-hidden bg-grid-fade"
     >
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_0%,#050816_70%)] pointer-events-none z-[1]" />
 
-      <HeroScene />
+      <HeroScene scrollProgress={scrollProgress} />
 
       <div className="relative z-10 mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8 pt-24 pb-16">
         <div className="max-w-xl lg:max-w-2xl pointer-events-none">
@@ -88,7 +102,7 @@ export default function Hero() {
             animate={{ opacity: 1 }}
             transition={{ delay: 1 }}
           >
-            Drag the 3D scene · auto-rotates
+            Scroll to drive the 3D scene · drag to orbit
           </motion.p>
         </div>
       </div>

@@ -1,15 +1,43 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { useRef } from "react";
+import dynamic from "next/dynamic";
+import { motion, useScroll, useMotionValueEvent } from "framer-motion";
 import SectionHeading from "./SectionHeading";
 import TechIcon from "./TechIcon";
 import { projects } from "@/lib/data";
 import { stackToIconSlug } from "@/lib/icons";
 
+const ScrollMorphScene = dynamic(() => import("./ScrollMorphScene"), {
+  ssr: false,
+  loading: () => null,
+});
+
 export default function Projects() {
+  const sectionRef = useRef<HTMLElement>(null);
+  const scrollProgress = useRef(0);
+
+  const { scrollYProgress } = useScroll({
+    target: sectionRef,
+    offset: ["start end", "end start"],
+  });
+
+  useMotionValueEvent(scrollYProgress, "change", (latest) => {
+    scrollProgress.current = latest;
+  });
+
   return (
-    <section id="projects" className="section-pad relative bg-navy-900/40">
-      <div className="mx-auto max-w-6xl">
+    <section
+      ref={sectionRef}
+      id="projects"
+      className="section-pad relative bg-navy-900/40 overflow-hidden"
+    >
+      {/* Scroll-tied secondary 3D moment — right side on desktop, subtle backdrop on mobile */}
+      <div className="pointer-events-none absolute right-0 top-1/2 -translate-y-1/2 h-[320px] w-[320px] sm:h-[420px] sm:w-[420px] lg:h-[520px] lg:w-[520px] opacity-40 sm:opacity-55 lg:opacity-80 translate-x-[18%] lg:translate-x-[8%]">
+        <ScrollMorphScene scrollProgress={scrollProgress} />
+      </div>
+
+      <div className="relative z-10 mx-auto max-w-6xl">
         <SectionHeading
           eyebrow="04 — Projects"
           title="Featured work"

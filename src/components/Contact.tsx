@@ -9,7 +9,7 @@ export default function Contact() {
     <section id="contact" className="section-pad relative bg-navy-900/40">
       <div className="mx-auto max-w-6xl">
         <SectionHeading
-          eyebrow="06 — Contact"
+          eyebrow="05 — Contact"
           title="Let's build something"
           description="Open to frontend roles, freelance collaborations, and interesting product work."
         />
